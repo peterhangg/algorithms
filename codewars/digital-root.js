@@ -6,6 +6,7 @@ const digital_root = n => {
   let sum = 0;
   // turn n into an array of numbers
   let numArray = [...String(n)].map(Number);
+  
   while(numArray.length > 1) {
     // get total sum of our array
     sum = numArray.reduce((a,b) => a + b);
