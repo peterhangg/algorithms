@@ -5,6 +5,8 @@
             Because nums[0] + nums[1] = 2 + 7 = 9,
             return [0, 1] */
 
+const nums = [2, 7, 11, 15];
+
 const twoSum = (num, target) => {
   let result = [];
   for (let i = 0; i < num.length; i++) {
@@ -17,22 +19,22 @@ const twoSum = (num, target) => {
   return result;
 };
 
+//////////////////////////////////////////////////////
 
-
-
-//////////// work in progress ////////////
-
-/* const twoSum = (num, target) => {
+const twoSum2 = (arr, target) => {
   let result = [];
-  let obj = {};
+  let hashTable = {};
 
-  for (let i = 0; i < num.length; i++) {
-    let input = target - num[i];
-    if(obj[input] !== undefined) {
-      result.push([obj[input], i])
+  for (let i = 0; i < arr.length; i++) {
+    let diff = target - arr[i];
+    // If 'diff' exist in hash table, push the value and index
+    if (hashTable[diff] !== undefined) {
+      result.push(hashTable[diff], i)
     }
-    obj[num[i]] = i;
+    // Array value as key and array index as value in hash table
+    hashTable[arr[i]] = i;
   }
   return result;
-} */
+};
 
+console.log(twoSum(nums, 9));
