@@ -13,8 +13,8 @@ Example:
 
 const countPrimes = n => {
   if (n < 2) return 0;
-  if(number == 2) return true;
   let primeCounter = 0;
+
   for(let i = 2; i < n; i++) {
     if (isPrime(i)) {
       primeCounter++;
