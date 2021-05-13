@@ -7,17 +7,17 @@
 
 const nums = [2, 7, 11, 15];
 
-const twoSum = (num, target) => {
-  let result = [];
-  for (let i = 0; i < num.length; i++) {
-    for (let j = i + 1; j < num.length; j ++) {
-      if (num[i] + num[j] === target) {
-        result.push(i,j);
-      }
-    }
-  }
-  return result;
-};
+// const twoSum = (num, target) => {
+//   let result = [];
+//   for (let i = 0; i < num.length; i++) {
+//     for (let j = i + 1; j < num.length; j ++) {
+//       if (num[i] + num[j] === target) {
+//         result.push(i,j);
+//       }
+//     }
+//   }
+//   return result;
+// };
 
 //////////////////////////////////////////////////////
 
@@ -28,7 +28,7 @@ const twoSum2 = (arr, target) => {
   for (let i = 0; i < arr.length; i++) {
     let diff = target - arr[i];
     // If 'diff' exist in hash table, push the value and index
-    if (hashTable[diff] !== undefined) {
+    if (hashTable[diff]) {
       result.push(hashTable[diff], i)
     }
     // Array value as key and array index as value in hash table
@@ -37,4 +37,4 @@ const twoSum2 = (arr, target) => {
   return result;
 };
 
-console.log(twoSum(nums, 9));
+console.log(twoSum2(nums, 9));

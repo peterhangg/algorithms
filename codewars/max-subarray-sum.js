@@ -24,7 +24,7 @@ const maxSequence2 = arr => {
 
   for (let i = 0; i < arr.length; i ++) {
     currentSum += arr[i];
-
+    console.log("current sum:", currentSum, "current ele:", arr[i],"max sum:", maxSum);
     if (currentSum > maxSum) {
       maxSum = currentSum;
     }
@@ -36,7 +36,7 @@ const maxSequence2 = arr => {
   return maxSum;
 };
 
-console.log(maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // should be 6: [4, -1, 2, 1]
+// console.log(maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // should be 6: [4, -1, 2, 1]
 console.log(maxSequence2([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // should be 6: [4, -1, 2, 1]
 
 
